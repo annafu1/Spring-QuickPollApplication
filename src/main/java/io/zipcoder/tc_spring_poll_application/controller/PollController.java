@@ -41,7 +41,7 @@ public class PollController {
 
     @RequestMapping(value="/polls/{pollId}", method=RequestMethod.GET)
     public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
-        Poll p = pollRepository.findOne(pollId);
+        Poll p = pollRepository.findOneById(pollId);
         return new ResponseEntity<> (p, HttpStatus.OK);
     }
 
