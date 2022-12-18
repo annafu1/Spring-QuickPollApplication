@@ -7,4 +7,6 @@ public interface PollRepository extends CrudRepository<Poll, Long> {
     Poll findOne(Long pollId);
 
     void delete(Long pollId);
+
+    boolean exists(Long pollId);
 }
